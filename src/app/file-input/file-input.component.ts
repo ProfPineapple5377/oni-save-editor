@@ -6,15 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./file-input.component.scss']
 })
 export class FileInputComponent implements OnInit {
-  filename = '';
+  file: File|null = null;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  onFileSelected(file:FileList){
-    
+  onFileSelected(e : Event){
+    console.log(e)
+    console.log(e.target)
+    const target = e.target as HTMLInputElement;
+    this.file = (target.files as FileList)[0];
+    console.log(this.file)
   }
-
 }

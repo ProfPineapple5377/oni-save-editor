@@ -1,4 +1,19 @@
-<p>file-input works!</p>
-<div>
-    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+<!--
+    Allows for use of mat-buttons with file input
+-->
+<input type="file" class="file-input" accept=".sav"
+       (change)="onFileSelected($event)" #fileInput>
+
+<div class="file-input-wrapper">
+    <div class="file-text-wrapper">
+        <div *ngIf="file; else noFile">
+            {{file.name}} 
+        </div>
+        <ng-template #noFile>
+            No file chosen.
+        </ng-template>
+    </div>
+    <button mat-mini-fab class="attach-file-button" color="primary" (click)="fileInput.click()">
+        <mat-icon aria-hidden="false">attach_file</mat-icon>
+    </button>
 </div>
