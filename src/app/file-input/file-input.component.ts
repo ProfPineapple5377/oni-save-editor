@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-file-input',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./file-input.component.scss']
 })
 export class FileInputComponent implements OnInit {
+  @Output() inputFileEvent = new EventEmitter<File>();
   file: File|null = null;
   constructor() { }
 
@@ -13,10 +14,8 @@ export class FileInputComponent implements OnInit {
   }
 
   onFileSelected(e : Event){
-    console.log(e)
-    console.log(e.target)
     const target = e.target as HTMLInputElement;
     this.file = (target.files as FileList)[0];
-    console.log(this.file)
+    this.inputFileEvent.emit(this.file)
   }
 }
