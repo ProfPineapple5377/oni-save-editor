@@ -8,14 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SaveEditorComponent implements OnInit {
   file: File|null = null;
   constructor() {
-   }
+  }
 
   ngOnInit(): void {
   }
 
   setFile(f: File){
-    console.log(f)
-    this.file = f
+    console.log(f);
+    this.file = f;
   }
 
 }

@@ -2,9 +2,16 @@
     display: None
 }
 
+.file-input-card{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
 .file-input-wrapper{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
@@ -12,7 +19,13 @@
     margin-right: .5em;
 }
 
-.file-location-dropdown{
-    justify-content: space-between;
+.mat-expansion-panel-header{
     align-items: center;
+}
+
+.mat-expansion-panel-header-description{
+    justify-content: end !important;
+}
+.mat-expansion-panel-header-title{
+    justify-content: start !important;
 }
