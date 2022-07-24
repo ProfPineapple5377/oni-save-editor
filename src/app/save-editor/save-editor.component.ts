@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FileHandlerComponent } from 'src/app/file-handler/file-handler.component';
 
 @Component({
   selector: 'app-save-editor',
@@ -6,16 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./save-editor.component.scss']
 })
 export class SaveEditorComponent implements OnInit {
-  file: File|null = null;
+  fileHandle : FileHandlerComponent;
   constructor() {
+    this.fileHandle = new FileHandlerComponent();
   }
 
   ngOnInit(): void {
   }
-
-  setFile(f: File){
-    console.log(f);
-    this.file = f;
-  }
-
 }

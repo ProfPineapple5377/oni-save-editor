@@ -7,13 +7,15 @@ import { FileInputComponent } from './file-input/file-input.component';
 import { HeaderComponent } from './header/header.component';
 import { SaveEditorComponent } from './save-editor/save-editor.component';
 import { MaterialModule } from './material/material.module';
+import { FileHandlerComponent } from './file-handler/file-handler.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileInputComponent,
     HeaderComponent,
-    SaveEditorComponent
+    SaveEditorComponent,
+    FileHandlerComponent
   ],
   imports: [
     BrowserModule,
