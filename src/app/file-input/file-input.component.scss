@@ -11,3 +11,8 @@
 .file-input-wrapper > *:not(:last-child){
     margin-right: .5em;
 }
+
+.file-location-dropdown{
+    justify-content: space-between;
+    align-items: center;
+}
