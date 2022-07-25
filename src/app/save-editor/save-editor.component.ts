@@ -7,9 +7,9 @@ import { FileHandlerComponent } from 'src/app/file-handler/file-handler.componen
   styleUrls: ['./save-editor.component.scss']
 })
 export class SaveEditorComponent implements OnInit {
-  fileHandle : FileHandlerComponent;
+  fileHandler: FileHandlerComponent;
   constructor() {
-    this.fileHandle = new FileHandlerComponent();
+    this.fileHandler = new FileHandlerComponent;
   }
 
   ngOnInit(): void {
