@@ -10,16 +10,20 @@ export class FileHandlerComponent {
   constructor() { }
 
   setFile(f: File){
+    FileHandlerComponent.setFile(f);
+  }
+
+  static setFile(f: File){
     console.log(f);
     FileHandlerComponent.file = f;
   }
 
-  getFile(){
+  getFile(): File|null{
+    return FileHandlerComponent.getFile()
+  }
+
+  static getFile(): File|null{
     return FileHandlerComponent.file;
-  }
-
-  static loadFile(f: File){
-
-  }
+  } 
 
 }
